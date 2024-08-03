@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import { useState } from "react";
+import axios from "axios";
 
 const Login = () => {
   const [userName, setUserName] = useState("");
@@ -14,7 +15,12 @@ const Login = () => {
   };
 
   const handleLogin = () => {
-    console.log(userName, password);
+    const payload = {
+      userName: userName,
+      password: password,
+    };
+
+    console.log(payload);
   };
 
   return (
